@@ -22,7 +22,7 @@
                     <h5 class="text-primary text-uppercase"><strong>Our Contacts</strong></h5>
                     <ul class="text-white pl-0" style="list-style-type:none;">
                         <li class="pb-1 pb-1"><i class="fas fa-phone fa-fw"></i>+254(0)753 000 888</li>
-                        <li class="pb-1 pb-1"><i class="fas fa-envelope fa-fw"></i>info@wizag.biz</li>
+                        <li class="pb-1 pb-1"><i class="fas fa-envelope fa-fw"></i>info@pc.com</li>
                     </ul>
                 </div>
             </div>
