@@ -1,0 +1,232 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//Admin-LTE
+@import '~admin-lte/dist/css/adminlte.css';
+
+// Font Awesome
+$fa-font-path:"../webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+
+/*--------------------------------------COMMON------------------------------------------*/
+html {
+    //Smooth scroll
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Roboto, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.btn-link{
+    color: $green !important;
+}
+.btn-link:hover {
+    color: $yellow !important;
+    text-decoration:none !important;
+}
+//GoTop
+#goToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    background-color: $green !important;
+    border-color:  $green !important;
+  }
+  #goToTopBtn:hover {
+    background-color: $orange !important;
+    border-color:  $orange !important;
+  }
+
+//Other
+.required:after {
+    content:" *";
+        color: $red;
+}
+// Pagination
+.page-item.active .page-link {
+    background-color: $green;
+    border-color: $green;
+    color: $white;
+}
+.page-link:hover {
+    color: $green;
+}
+.page-link {
+    color: $green;
+}
+/*--------------------------------------COMMON------------------------------------------*/
+
+
+/*--------------------------------------Home------------------------------------------*/
+#home{
+    #hero{
+        min-height: 100vh;
+        background-image: linear-gradient(rgba(61, 192, 113, 0.8), rgba(61, 192, 113, 0.8)), url(/images/laptop.jpg);
+        background-size: cover;
+        background-position: center;
+        nav{
+            border-top: 1.5px solid $orange;
+            .logo{
+                text-shadow: 0.05px 0.05px $orange;
+            }
+            //Dropdown menu
+            .dropdown-menu{
+                background-color: transparent;
+                border: none;
+                box-shadow: none;
+                a{
+                    margin-top: 5px;
+                    background-color: $white;
+                    color: $green;
+                    font-size: small;
+                    font-weight: bold;
+                }
+                a:hover{
+                    border-left: 2px solid $orange;
+                }
+            }
+        }
+    }
+    //FAQs
+    #faqs{
+        .card{
+            border-left: 3px solid $orange !important;
+        }
+    }
+
+    //advert
+    #advert{
+        .bg-success-warning{
+            background: linear-gradient(to right, $green 0%, $orange 100%)
+        }
+    }
+
+
+}
+/*-------------------------------------------------./Home-------------------------------------------------*/
+
+
+
+/*-------------------------------------------------auth-------------------------------------------------*/
+#auth {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, $yellow 3%, $green 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    .card{
+        color: $white;
+        background-color: $opaque !important;
+    }
+}
+/*-------------------------------------------------./auth-------------------------------------------------*/
+
+
+/*--------------------------------------AdminLTE------------------------------------------*/
+#adminLTE{
+    .sidebar-dark-primary {
+        background-color: $black !important;
+    }
+    .main-header{
+        background: $green;
+        border-top: 2px solid $orange;
+            a{
+                color: $white;
+            }
+            .dropdown-menu{
+                a{
+                    color: $black;
+                }
+                a:hover{
+                    background-color: $white;
+                    font-weight: bold;
+                    border-bottom: 2px solid $black;
+                }
+            }
+        }
+        .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
+        .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+            background-color: $green !important;
+            color: $white !important;
+            border-left: $orange 5px solid !important;
+        }
+        .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link:hover,
+        .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link:hover,
+        .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link:visited {
+            border-bottom: 2px solid $white;
+            background-color: $black !important;
+        }
+        .has-treeview{
+        .nav-treeview>li>a,.far{
+            padding-top: 0;
+            padding-bottom: 0;
+            // font-size: 14px;
+            }
+        }
+
+        //Siderbar
+        .sidebar{
+            .bg-opaque{
+                background-color: $opaque;
+            }
+        }
+
+}
+/*--------------------------------------./AdminLTE------------------------------------------*/
+
+
+
+/*-------------------------------------------------Footer-------------------------------------------------*/
+
+#footer
+{
+    #top{
+        background-color:$black !important;
+        border-top: 2px solid $orange;
+        .text-primary{
+            color: $green !important;
+        }
+        .social-media{
+            a{
+                color: $white !important;
+                i{
+                    padding: 5px;
+                }
+            }
+            a:hover, a:focus{
+                i{
+                    border-radius: 25px !important;
+                    color: $black !important;
+                    background-color: $white !important;
+                }
+            }
+        }
+    }
+    #bottom{
+        background-color: $green !important;
+        // background: linear-gradient(to left, $green 3%, $orange 100%);
+        color: $white !important;
+        a{
+            color: $white;
+        }
+        a:hover{
+            color: $orange;
+        }
+    }
+}
+/*-------------------------------------------------./Footer-------------------------------------------------*/
+

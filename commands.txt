@@ -1,0 +1,76 @@
+A. LAREVEL
+1. Create Project
+composer create-project laravel/laravel PhysiotherapyClinic
+
+2. Auth
+composer require laravel/ui
+npm install bootstrap@4 --save
+php artisan ui bootstrap
+php artisan ui bootstrap --auth
+npm install && npm run dev
+npm install
+npm run dev
+
+3. Controllers
+php artisan make:controller WelcomeController
+php artisan make:controller Main/DashboardController
+php artisan make:controller Main/UserController -r
+php artisan make:controller Main/AppointmentController -r
+php artisan make:controller Main/TherapyRoomController -r
+php artisan make:controller Settings/ProfileController -r
+
+
+6. Models
+php artisan make:model Main/Appointment -m
+php artisan make:model Main/TherapyRoom -m
+php artisan make:model Other/UserType -m
+php artisan make:model Other/AppointmentStatus -m
+
+
+
+7. Mails
+php artisan make:mail CommonMail
+
+8. Customize Auth Email
+php artisan vendor:publish --tag=laravel-mail
+
+7. Middleware
+A. Create
+php artisan make:middleware AdminsOnly
+B. Assigning Middleware To Routes: Within App\Http\Kernel class
+protected $routeMiddleware = [
+    //Add
+    'adminonly' => \App\Http\Middleware\AdminsOnly::class,
+];
+
+
+8. IMPORTANT COMMANDS
+php artisan config:clear
+php artisan cache:clear
+composer dump-autoload
+php artisan view:clear
+php artisan route:clear
+composer install --optimize-autoloader --no-dev
+
+B. FONT AWESOME
+1. Installation
+npm install --save @fortawesome/fontawesome-free --save
+
+2. Usage
+-Add below line to app.scss
+$fa-font-path:"../webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+
+
+C. ADMIN-LTE
+1. Installation
+npm install admin-lte@^3.1 --save
+
+2. Usage
+-Add below line to app.scss
+@import '~admin-lte/dist/css/adminlte.css';
+-Add to bootstrap inside resource/js
+require('admin-lte');
